@@ -1,0 +1,190 @@
+/* --- Color Palette Based on Logo --- */
+:root {
+    --color-white: #FFFFFF;
+    --color-dark-text: #333333;
+    --color-light-green: #A4D94C; /* Light green from logo */
+    --color-dark-blue: #35A7C5; /* Turquoise blue from logo */
+    /* WhatsApp Green for the button */
+    --color-whatsapp: #25D366; 
+}
+
+/* --- Global and Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-dark-text);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- Header and Logo --- */
+header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 280px;
+    height: auto;
+}
+
+/* --- Headings --- */
+.main-heading {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--color-dark-text);
+    margin-bottom: 30px;
+}
+
+/* --- Services List (No change) --- */
+.services-list {
+    background: #f7f7f7;
+    border-left: 5px solid var(--color-light-green);
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.services-list h3 {
+    font-size: 1.3em;
+    color: var(--color-dark-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.services-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+}
+
+.services-list li {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 15px); 
+    font-weight: 400;
+}
+
+.icon {
+    font-size: 1.2em;
+    color: var(--color-light-green);
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+/* --- Call-to-Action (CTA) - WhatsApp Button Styling --- */
+.cta-section {
+    background: var(--color-dark-blue);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px auto;
+    color: var(--color-white);
+}
+
+.cta-section h4 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.whatsapp-button {
+    /* Basic Button Styling */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: var(--color-whatsapp); /* Official WhatsApp Green */
+    color: var(--color-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill shape for attractiveness */
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s;
+    width: 100%; /* Full width on mobile */
+    max-width: 350px; /* Max width on desktop */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon {
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+    background: #1DA851; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-info {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (min-width: 600px) {
+    .main-heading {
+        font-size: 2.8em;
+    }
+    
+    .whatsapp-button {
+        width: auto; /* Shrink button on desktop */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 1.8em;
+    }
+    
+    .services-list li {
+        width: 100%;
+    }
+}
